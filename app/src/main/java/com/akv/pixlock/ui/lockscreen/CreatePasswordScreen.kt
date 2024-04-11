@@ -18,7 +18,7 @@ class CreatePasswordScreen : Screen {
         val pass = lockScreenVm.password.value
 
         BaseLockScreen(
-            title = "Create Your Passcode",
+            title = "Create Your Password",
             lockScreenVm = lockScreenVm
         ) { key ->
             when (key) {

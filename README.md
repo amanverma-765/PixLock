@@ -1,6 +1,6 @@
 # PixLock
 
-PixLock is a simple and easy to use app for storing your important photos and videos with proper encryption 
+PixLock is a simple app for securely storing your important photos and videos with proper encryption 
 
 ## LockScreen
 

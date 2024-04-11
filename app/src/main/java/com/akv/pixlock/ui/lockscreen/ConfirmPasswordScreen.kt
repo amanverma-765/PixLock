@@ -17,7 +17,7 @@ data class ConfirmPasswordScreen(val pass: String) : Screen {
         val ctx = LocalContext.current
 
         BaseLockScreen(
-            title = "Confirm Your Passcode",
+            title = "Confirm Your Password",
             lockScreenVm = lockScreenVm
         ) { key ->
             when (key) {

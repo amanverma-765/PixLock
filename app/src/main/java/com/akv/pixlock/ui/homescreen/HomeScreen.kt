@@ -3,6 +3,7 @@ package com.akv.pixlock.ui.homescreen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -30,13 +31,15 @@ class HomeScreen : Screen {
                 )
             },
 
-        ) { padding ->
+            ) { paddingValues ->
             LazyVerticalStaggeredGrid(
-                contentPadding = padding,
+                contentPadding = paddingValues,
                 columns = StaggeredGridCells.Adaptive(200.dp)
             ) {
 
+
             }
+
         }
     }
 }
