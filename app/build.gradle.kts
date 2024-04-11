@@ -78,4 +78,7 @@ dependencies {
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
     implementation(libs.voyager.tab.navigator)
+
+    // Icons Pack
+    implementation(libs.feather.icons)
 }

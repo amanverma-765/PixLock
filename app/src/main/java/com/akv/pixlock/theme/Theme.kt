@@ -75,7 +75,7 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun PixLockTheme(
-    seedColor: Color = Color.Green,
+    seedColor: Color = Color.Yellow,
     useDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

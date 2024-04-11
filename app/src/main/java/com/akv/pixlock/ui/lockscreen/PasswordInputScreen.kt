@@ -17,11 +17,6 @@ class PasswordInputScreen : Screen {
         val lockScreenVm = LockScreenViewModel()
         val navigator = LocalNavigator.currentOrThrow
 
-        LaunchedEffect(key1 = Unit) {
-            if (lockScreenVm.passNotCreated(ctx)) {
-                navigator.replaceAll(CreatePasswordScreen())
-            }
-        }
         BaseLockScreen(
             title = "Enter Your Password",
             lockScreenVm = lockScreenVm
@@ -32,7 +27,6 @@ class PasswordInputScreen : Screen {
                 }
                 "next" -> {
                     if (lockScreenVm.authenticatePass(ctx)) {
-
                         navigator.push(HomeScreen())
                     }
                 }

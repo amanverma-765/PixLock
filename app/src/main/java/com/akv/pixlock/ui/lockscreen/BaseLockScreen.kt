@@ -23,20 +23,15 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.akv.pixlock.ui.components.PixLockLogo
-import com.akv.pixlock.ui.lockscreen.components.PassInputField
-import com.akv.pixlock.ui.lockscreen.components.PasswordButtons
+import com.akv.pixlock.ui.components.PassInputField
+import com.akv.pixlock.ui.components.PasswordButtons
 import com.akv.pixlock.ui.lockscreen.viewmodels.LockScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
