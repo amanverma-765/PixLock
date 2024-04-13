@@ -1,8 +1,9 @@
-package com.akv.pixlock.ui.components
+package com.akv.pixlock.ui.lockscreen.components
 
 import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -36,14 +37,12 @@ fun PasswordButtons(
     val displaySize = LocalConfiguration.current.screenHeightDp.dp
     val btnHeight = ((displaySize / 2) / 5 - 4.dp)
 
-    LaunchedEffect(key1 = btnHeight) {
-        Log.e("TAG", "PasswordButtons: $btnHeight", )
-    }
-
     Surface(
         modifier = modifier
             .height(btnHeight)
-            .heightIn(min = 40.dp)
+            .defaultMinSize(
+                minHeight = 40.dp
+            )
             .clip(RoundedCornerShape(45.dp))
             .clickable {
                 onClick(passButton.content)

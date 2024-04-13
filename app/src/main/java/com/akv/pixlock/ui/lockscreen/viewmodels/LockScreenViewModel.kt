@@ -25,8 +25,8 @@ class LockScreenViewModel : ViewModel() {
             _password.value += key
     }
 
-    fun passNotCreated(ctx: Context): Boolean {
-        return getValue(key = "password", ctx = ctx) == null
+    fun passNotCreated(context: Context): Boolean {
+        return getValue(key = "password", context = context) == null
     }
 
     fun delKey() {
@@ -59,10 +59,10 @@ class LockScreenViewModel : ViewModel() {
         }
     }
 
-    fun savePassword(ctx: Context, pass: String): Boolean {
+    fun savePassword(context: Context, pass: String): Boolean {
         return if (confirmPass(pass = pass) && validate(pass = pass)) {
             viewModelScope.launch {
-                saveValue(ctx = ctx, key = "password", value = _password.value)
+                saveValue(context = context, key = "password", value = _password.value)
             }
             true
         } else {
@@ -74,12 +74,12 @@ class LockScreenViewModel : ViewModel() {
         _errorState.value = LockscreenErrorType.NO_ERROR
     }
 
-    fun enableHaptics(ctx: Context) {
-        hapticFeedBack(ctx)
+    fun enableHaptics(context: Context) {
+        hapticFeedBack(context)
     }
 
-    fun authenticatePass(ctx: Context): Boolean {
-        return if (_password.value == getValue(ctx = ctx, key = "password")) {
+    fun authenticatePass(context: Context): Boolean {
+        return if (_password.value == getValue(context = context, key = "password")) {
             _errorState.value = LockscreenErrorType.PASSCODE_CORRECT
             true
         } else {

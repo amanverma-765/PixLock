@@ -1,4 +1,4 @@
-package com.akv.pixlock.ui.components
+package com.akv.pixlock.ui.lockscreen.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.scaleIn

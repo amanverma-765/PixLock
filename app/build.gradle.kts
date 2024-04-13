@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.akv.pixlock"
-        minSdk = 24
+        minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -31,11 +31,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -70,15 +70,15 @@ dependencies {
 
     // Monet Colors
     implementation(libs.material.kolor)
-
-    // ViewModel Lifecycle
+    // ViewModel Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
     // Voyager Navigation
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
     implementation(libs.voyager.tab.navigator)
-
     // Icons Pack
     implementation(libs.feather.icons)
+    // Coil Image Loader
+    implementation(libs.coil.compose)
+
 }

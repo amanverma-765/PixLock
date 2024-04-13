@@ -1,26 +1,25 @@
-package com.akv.pixlock.ui.tabs
+package com.akv.pixlock.ui.homescreen.tabs
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import compose.icons.FeatherIcons
+import compose.icons.feathericons.Slack
 
-object SearchTab : Tab {
-    private fun readResolve(): Any = SearchTab
+object CollectionsTab : Tab {
+    private fun readResolve(): Any = CollectionsTab
     override val options: TabOptions
         @Composable
         get() {
-            val title = "Search"
-            val icon = rememberVectorPainter(Icons.Default.Search)
+            val title = "Collections"
+            val icon = rememberVectorPainter(FeatherIcons.Slack)
 
             return remember {
                 TabOptions(
-                    index = 2u,
+                    index = 1u,
                     title = title,
                     icon = icon
                 )
@@ -30,6 +29,6 @@ object SearchTab : Tab {
     @Composable
     override fun Content() {
 
-        Text(text = "Search Tab Content")
+        Text(text = "Collections Tab Content")
     }
 }

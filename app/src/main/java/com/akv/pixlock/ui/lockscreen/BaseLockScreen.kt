@@ -30,8 +30,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.akv.pixlock.ui.components.PixLockLogo
-import com.akv.pixlock.ui.components.PassInputField
-import com.akv.pixlock.ui.components.PasswordButtons
+import com.akv.pixlock.ui.lockscreen.components.PassInputField
+import com.akv.pixlock.ui.lockscreen.components.PasswordButtons
 import com.akv.pixlock.ui.lockscreen.viewmodels.LockScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,7 +42,7 @@ fun BaseLockScreen(
     onClick: (String) -> Unit
 ) {
 
-    val ctx = LocalContext.current
+    val context = LocalContext.current
 
     Scaffold(
         topBar = {
@@ -96,7 +96,7 @@ fun BaseLockScreen(
                             modifier = Modifier.padding(4.dp),
                             passButton = button
                         ) { key ->
-                            lockScreenVm.enableHaptics(ctx)
+                            lockScreenVm.enableHaptics(context)
                             onClick(key)
                         }
                     }

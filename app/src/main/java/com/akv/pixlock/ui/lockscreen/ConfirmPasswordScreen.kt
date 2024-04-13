@@ -14,7 +14,7 @@ data class ConfirmPasswordScreen(val pass: String) : Screen {
 
         val lockScreenVm = viewModel<LockScreenViewModel>()
         val navigator = LocalNavigator.currentOrThrow
-        val ctx = LocalContext.current
+        val context = LocalContext.current
 
         BaseLockScreen(
             title = "Confirm Your Password",
@@ -26,7 +26,7 @@ data class ConfirmPasswordScreen(val pass: String) : Screen {
                 }
 
                 "next" -> {
-                    if (lockScreenVm.savePassword(ctx, pass)) {
+                    if (lockScreenVm.savePassword(context, pass)) {
                         navigator.replaceAll(PasswordInputScreen())
                     }
                 }

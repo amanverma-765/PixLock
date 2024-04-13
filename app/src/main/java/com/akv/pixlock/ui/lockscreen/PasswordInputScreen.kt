@@ -1,7 +1,6 @@
 package com.akv.pixlock.ui.lockscreen
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -13,7 +12,7 @@ class PasswordInputScreen : Screen {
     @Composable
     override fun Content() {
 
-        val ctx = LocalContext.current
+        val context = LocalContext.current
         val lockScreenVm = LockScreenViewModel()
         val navigator = LocalNavigator.currentOrThrow
 
@@ -26,7 +25,7 @@ class PasswordInputScreen : Screen {
                     lockScreenVm.delKey()
                 }
                 "next" -> {
-                    if (lockScreenVm.authenticatePass(ctx)) {
+                    if (lockScreenVm.authenticatePass(context)) {
                         navigator.push(HomeScreen())
                     }
                 }

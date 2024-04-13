@@ -1,4 +1,4 @@
-package com.akv.pixlock.ui.components
+package com.akv.pixlock.ui.homescreen.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.akv.pixlock.ui.components.PixLockLogo
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
